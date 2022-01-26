@@ -1,0 +1,21 @@
+class Solution {
+    public int findNumbers(int[] nums) {
+        
+        int sum = 0;
+        for (int i:nums){
+            int ret = buildArray(i);
+            if (ret%2==0)
+                sum+=1;
+        }
+        return sum;
+    }
+    public static int buildArray(int num){
+        int sum = 0;
+        while(num!=0){
+
+            num = num/10;
+            sum+=1;
+        }
+        return sum;
+    }
+}
